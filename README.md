@@ -16,13 +16,16 @@ Program ini menyediakan antarmuka grafis (GUI) interaktif untuk melakukan berbag
 ## Dependensi
 
 ### Software
-- **MATLAB** (R2019b atau versi lebih baru disarankan)
-- **MATLAB Image Processing Toolbox** (diperlukan)
+
+* **MATLAB** (R2019b atau versi lebih baru disarankan)
+* **MATLAB Image Processing Toolbox** (diperlukan)
 
 ### MATLAB Toolbox yang Digunakan
-| Toolbox | Kegunaan |
-|---------|----------|
-| Image Processing Toolbox | Fungsi manipulasi citra dasar (`imread`, `imwrite`, `im2double`, dll.) |
+
+| Toolbox                   | Kegunaan                                                                                               |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Image Processing Toolbox  | Fungsi manipulasi citra dasar (`imread`, `imwrite`, `im2double`, dll.)                                 |
+| Signal Processing Toolbox | Fungsi `sinc` untuk perhitungan kernel filter berbasis sinc, jika digunakan dalam implementasi filter. |
 
 
 ## Cara Menjalankan Program
@@ -148,7 +151,7 @@ Metode untuk merestorasi citra yang kabur akibat gerak linier.
 3. **Pilih Metode**: Pilih metode spesifik dari dropdown sub-metode
 4. **Atur Parameter**: Gunakan slider dan field input untuk mengatur parameter
 5. **Proses**: Klik "Jalankan Pemrosesan" atau aktifkan "Proses Otomatis"
-6. **Simpan Hasil**: Klik "Save" untuk menyimpan citra yang telah diproses
+6. **Simpan Hasil**: Klik "Simpan Hasil..." untuk menyimpan citra yang telah diproses
 
 
 ##  Pembagian Tugas
