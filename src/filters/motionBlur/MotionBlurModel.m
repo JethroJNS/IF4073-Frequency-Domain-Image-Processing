@@ -22,7 +22,7 @@ classdef MotionBlurModel
             b = L * sin(rad);
 
             s = (U / cols) * a - (V / rows) * b;
-            H = sinc(s);
+            H = MotionBlurModel.sincNormalized(s);
 
             if includePhase
                 H = H .* exp(-1j * pi * s);
@@ -61,6 +61,15 @@ classdef MotionBlurModel
             if s > 0
                 psf = psf / s;
             end
+        end
+    end
+
+    methods (Static, Access = private)
+        function val = sincNormalized(x)
+            val = ones(size(x));
+            idx = (x ~= 0);
+            piX = pi * x(idx);
+            val(idx) = sin(piX) ./ piX;
         end
     end
 end
